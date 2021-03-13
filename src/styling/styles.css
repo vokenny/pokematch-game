@@ -1,0 +1,31 @@
+* {
+  font-family: 'Fascinate', cursive;
+}
+
+body {
+  background-color: #81d481;
+}
+
+#title {
+  margin-top: 5vh;
+  color: #0b570b;
+}
+
+.playing-grid {
+  margin: auto auto;
+}
+
+.card-container {
+  margin: 1vh auto;
+}
+
+.card {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #8d0000;
+}
+
+.card-body > img {
+  margin: 25% auto;
+}

@@ -9,5 +9,10 @@
   function CardController(CardStateService) {
     const card = this;
     const cardState = CardStateService;
+
+    card.getCards = () => {
+      console.log(cardState.cards);
+      return cardState.cards;
+    }
   }
 }());

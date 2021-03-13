@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styling/styles.css" />
     <title>Pokematch Card Game</title>
   </head>
 
@@ -14,9 +30,9 @@
     </script>
 
     <main ng-app="PokeMatchApp">
-      <h1>Pokematch Card Game</h1>
-      <section class="container" ng-controller="PokeController as pokeCtrl">
-        <card sprites="pokeCtrl.sprites"></card>
+      <h1 id="title" class="text-center">Pokematch Card Game</h1>
+      <section class="container">
+        <card></card>
       </section>
     </main>
 
@@ -29,7 +45,6 @@
     <!-- PokeMatchApp artifacts -->
     <script src="src/services/pokeData.service.js"></script>
     <script src="src/services/cardState.service.js"></script>
-    <script src="src/controllers/poke.controller.js"></script>
     <script src="src/controllers/card.controller.js"></script>
     <script src="src/components/card.component.js"></script>
   </body>

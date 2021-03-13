@@ -6,9 +6,6 @@
     .component('card', {
       templateUrl: 'src/templates/card.html',
       controller: 'CardController',
-      controllerAs: 'cardCtrl',
-      bindings: {
-        sprites: '<'
-      }
+      controllerAs: 'cardCtrl'
     });
 }());

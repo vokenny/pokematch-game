@@ -1,4 +1,12 @@
-<div ng-repeat="sprite in cardCtrl.sprites">
-  <img src="{{sprite.path}}" alt="{{sprite.name}}" />
-  <p>{{sprite.name}}</p>
+<div class="playing-grid row">
+  <div
+    class="card-container col-4 col-sm-3 col-md-2"
+    ng-repeat="sprite in cardCtrl.getCards() track by $index"
+  >
+    <div class="card">
+      <div class="card-body">
+        <img src="{{sprite.path}}" alt="{{sprite.name}}" />
+      </div>
+    </div>
+  </div>
 </div>
