@@ -4,14 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
     <title>Pokematch Card Game</title>
   </head>
+
   <body>
+    <script>
+      const P = new Pokedex.Pokedex({ cacheImages: true });
+    </script>
+
     <main ng-app="PokeMatchApp">
-      <section
-        class="container"
-        ng-controller="MatchController as matchCtrl"
-      ></section>
+      <h1>Pokematch Card Game</h1>
+      <section class="container" ng-controller="PokeController as pokeCtrl">
+        <card sprites="pokeCtrl.sprites"></card>
+      </section>
     </main>
+
+    <!-- Libraries -->
+    <script src="/node_modules/angular/angular.js"></script>
+
+    <!-- PokeMatchApp Module -->
+    <script src="src/modules/poke-match.module.js"></script>
+
+    <!-- PokeMatchApp artifacts -->
+    <script src="src/services/pokeData.service.js"></script>
+    <script src="src/services/cardState.service.js"></script>
+    <script src="src/controllers/poke.controller.js"></script>
+    <script src="src/controllers/card.controller.js"></script>
+    <script src="src/components/card.component.js"></script>
   </body>
 </html>
