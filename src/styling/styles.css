@@ -11,13 +11,13 @@ body {
   color: #002215;
 }
 
-.playing-grid {
+.row {
   margin: auto auto;
 }
 
 .card-container {
   height: 15vh;
-  margin: 1% auto;
+  padding: 1.5vh;
 }
 
 .button-tile {
