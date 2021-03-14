@@ -11,15 +11,15 @@
     const pokeData = this;
 
     const pkmn = [
-      { name: 'Venusaur', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/3.gif' },
-      { name: 'Charizard', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/6.gif' },
-      { name: 'Blastoise', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/9.gif' },
-      { name: 'Meganium', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/154.gif' },
-      { name: 'Typhlosion', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/157.gif' },
-      { name: 'Feraligatr', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/160.gif' },
-      { name: 'Sceptile', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/254.gif' },
-      { name: 'Blaziken', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/257.gif' },
-      { name: 'Swampert', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/260.gif' }
+      { name: 'Bulbasaur', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/1.gif' },
+      { name: 'Charmander', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/4.gif' },
+      { name: 'Squirtle', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/7.gif' },
+      { name: 'Chikorita', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/152.gif' },
+      { name: 'Cyndaquil', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/155.gif' },
+      { name: 'Totodile', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/158.gif' },
+      { name: 'Treecko', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/252.gif' },
+      { name: 'Torchic', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/255.gif' },
+      { name: 'Mudkip', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/258.gif' }
     ];
 
     pokeData.data = pkmn;

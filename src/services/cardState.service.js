@@ -23,23 +23,19 @@
 
     shuffle(playingCards);
 
-    function shuffle(array) {
+    function shuffle(arr) {
       // Fisher-Yates shuffle
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * i)
-        const temp = array[i]
-        array[i] = array[j]
-        array[j] = temp
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
       }
     }
 
     cardState.cards = playingCards;
 
     cardState.flipCard = (idx) => {
-      //  Flip card
       playingCards[idx].isFlipped = !playingCards[idx].isFlipped;
 
-      // Flipped cards that are still in play
       let flippedInPlay = playingCards.filter((card) => card.inPlay && card.isFlipped);
 
       // If two cards are flipped, check if they match
