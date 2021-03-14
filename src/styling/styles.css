@@ -7,12 +7,24 @@ body {
 }
 
 #title {
-  margin-top: 5vh;
+  margin-top: 35vh;
   color: #002215;
 }
 
+#start {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: auto;
+  width: auto;
+}
+
+.game-grid {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
 .row {
-  margin: auto auto;
+  margin: auto;
 }
 
 .card-container {

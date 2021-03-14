@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PokeApi JS Wrapper -->
     <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
 
     <!-- Google Font -->
@@ -30,14 +32,12 @@
     </script>
 
     <main ng-app="PokeMatchApp">
-      <h1 id="title" class="text-center">Pokematch Card Game</h1>
-      <section class="container">
-        <card></card>
-      </section>
+      <ui-view></ui-view>
     </main>
 
     <!-- Libraries -->
     <script src="/node_modules/angular/angular.js"></script>
+    <script src="https://unpkg.com/@uirouter/angularjs@1.0.29/release/angular-ui-router.js"></script>
 
     <!-- PokeMatchApp Module -->
     <script src="src/modules/poke-match.module.js"></script>
@@ -47,5 +47,8 @@
     <script src="src/services/cardState.service.js"></script>
     <script src="src/controllers/card.controller.js"></script>
     <script src="src/components/card.component.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
   </body>
 </html>
