@@ -14,7 +14,7 @@
     const FLIP_DELAY = 250;
 
     const uniqueCards = pokeData.data.map((pkmn) => {
-      pkmn.isFlipped = false;
+      pkmn.isFaceUp = false;
       pkmn.inPlay = true;
       return pkmn;
     });
@@ -35,13 +35,13 @@
     cardState.cards = playingCards;
 
     cardState.flipCard = (idx) => {
-      playingCards[idx].isFlipped = !playingCards[idx].isFlipped;
+      playingCards[idx].isFaceUp = !playingCards[idx].isFaceUp;
 
       matchCards();
     };
 
     function matchCards() {
-      let flippedInPlay = playingCards.filter((card) => card.inPlay && card.isFlipped);
+      let flippedInPlay = playingCards.filter((card) => card.inPlay && card.isFaceUp);
 
       if (flippedInPlay.length === MAX_FLIPPED_IN_PLAY_CARDS) {
         let pkmnName = flippedInPlay[0].name;
@@ -59,7 +59,7 @@
     }
 
     function faceDownCards(cards) {
-      cards.map((card) => card.isFlipped = false);
+      cards.map((card) => card.isFaceUp = false);
     }
   }
 }());

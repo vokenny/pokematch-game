@@ -8,9 +8,9 @@
       ng-disabled="!sprite.inPlay"
       ng-click="cardCtrl.flipCard($index)"
     >
-      <div class="card" ng-class="!sprite.isFlipped ? 'card-back' : ''">
+      <div class="card" ng-class="!sprite.isFaceUp ? 'card-back' : ''">
         <div class="card-body">
-          <img src="{{sprite.path}}" ng-if="sprite.isFlipped" />
+          <img src="{{sprite.path}}" ng-if="sprite.isFaceUp" />
         </div>
       </div>
     </button>
