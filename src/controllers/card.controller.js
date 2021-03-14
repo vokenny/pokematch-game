@@ -10,9 +10,8 @@
     const card = this;
     const cardState = CardStateService;
 
-    card.getCards = () => {
-      console.log(cardState.cards);
-      return cardState.cards;
-    }
+    card.getCards = () => cardState.cards;
+
+    card.flipCard = (idx) => cardState.flipCard(idx);
   }
 }());

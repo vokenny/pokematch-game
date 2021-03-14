@@ -3,10 +3,16 @@
     class="card-container col-4 col-md-2"
     ng-repeat="sprite in cardCtrl.getCards() track by $index"
   >
-    <div class="card">
-      <div class="card-body">
-        <img src="{{sprite.path}}" alt="{{sprite.name}}" />
+    <button
+      class="button-tile"
+      ng-disabled="!sprite.inPlay"
+      ng-click="cardCtrl.flipCard($index)"
+    >
+      <div class="card" ng-class="!sprite.isFlipped ? 'card-back' : ''">
+        <div class="card-body">
+          <img src="{{sprite.path}}" ng-if="sprite.isFlipped" />
+        </div>
       </div>
-    </div>
+    </button>
   </div>
 </div>
