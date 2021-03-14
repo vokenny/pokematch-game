@@ -11,7 +11,7 @@
     const pokeData = PokeDataService;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
-    const FLIP_DELAY = 250;
+    const FLIP_DELAY = 500;
 
     const uniqueCards = pokeData.data.map((pkmn) => {
       pkmn.isFaceUp = false;

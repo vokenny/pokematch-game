@@ -34,6 +34,8 @@ body {
   justify-content: center;
   align-items: center;
   border: 3px solid #005835;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
 }
 
 .card-body {
@@ -42,5 +44,6 @@ body {
 }
 
 .card-back {
+  transform: rotateY(180deg);
   background-color: #00a060;
 }
