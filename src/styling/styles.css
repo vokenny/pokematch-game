@@ -16,6 +16,7 @@ body {
 }
 
 .card-container {
+  height: 25vh;
   margin: 1vh auto;
 }
 
@@ -26,6 +27,7 @@ body {
   border: 2px solid #8d0000;
 }
 
-.card-body > img {
-  margin: 25% auto;
+.card-body {
+  display: flex;
+  align-items: center;
 }

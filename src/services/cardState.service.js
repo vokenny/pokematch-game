@@ -12,12 +12,13 @@
 
     const uniqueCards = pokeData.data.map((pkmn) => {
       pkmn.isFlipped = false;
+      pkmn.inPlay = true;
       return pkmn;
     });
 
-    const duplicatedCards = [...uniqueCards, ...uniqueCards];
+    const playingCards = [...uniqueCards, ...uniqueCards];
 
-    shuffle(duplicatedCards);
+    shuffle(playingCards);
 
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -28,6 +29,6 @@
       }
     }
 
-    cardState.cards = duplicatedCards;
+    cardState.cards = playingCards;
   }
 }());

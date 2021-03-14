@@ -16,7 +16,10 @@
       { name: 'Blastoise', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/9.gif' },
       { name: 'Meganium', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/154.gif' },
       { name: 'Typhlosion', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/157.gif' },
-      { name: 'Feraligatr', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/160.gif' }
+      { name: 'Feraligatr', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/160.gif' },
+      { name: 'Sceptile', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/254.gif' },
+      { name: 'Blaziken', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/257.gif' },
+      { name: 'Swampert', path: PokeApiSpriteBasePath + '/generation-v/black-white/animated/260.gif' }
     ];
 
     pokeData.data = pkmn;
