@@ -5,12 +5,13 @@
     .module('PokeMatchApp')
     .service('CardStateService', CardStateService)
 
-  CardStateService.$inject = ['PokeDataService']
-  function CardStateService(PokeDataService) {
+  CardStateService.$inject = ['$timeout', 'PokeDataService']
+  function CardStateService($timeout, PokeDataService) {
     const cardState = this;
     const pokeData = PokeDataService;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
+    const FLIP_DELAY = 250;
 
     const uniqueCards = pokeData.data.map((pkmn) => {
       pkmn.isFlipped = false;
@@ -36,20 +37,29 @@
     cardState.flipCard = (idx) => {
       playingCards[idx].isFlipped = !playingCards[idx].isFlipped;
 
+      matchCards();
+    };
+
+    function matchCards() {
       let flippedInPlay = playingCards.filter((card) => card.inPlay && card.isFlipped);
 
-      // If two cards are flipped, check if they match
-      // If they match, set inPlay to false
-      // If they don't match, set isFlipped to false
       if (flippedInPlay.length === MAX_FLIPPED_IN_PLAY_CARDS) {
         let pkmnName = flippedInPlay[0].name;
 
         if (flippedInPlay.every((pkmn) => pkmn.name === pkmnName)) {
-          flippedInPlay.map((card) => card.inPlay = false);
+          removeFromPlay(flippedInPlay);
         } else {
-          flippedInPlay.map((card) => card.isFlipped = !card.isFlipped);
+          $timeout(faceDownCards, FLIP_DELAY, true, flippedInPlay);
         }
       }
-    };
+    }
+
+    function removeFromPlay(cards) {
+      cards.map((card) => card.inPlay = false);
+    }
+
+    function faceDownCards(cards) {
+      cards.map((card) => card.isFlipped = false);
+    }
   }
 }());
