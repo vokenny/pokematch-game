@@ -3,12 +3,14 @@
 
   angular
     .module('PokeMatchApp')
-    .service('CardStateService', CardStateService)
+    .service('GameStateService', GameStateService);
 
-  CardStateService.$inject = ['$timeout', 'PokeDataService']
-  function CardStateService($timeout, PokeDataService) {
-    const cardState = this;
+  GameStateService.$inject = ['$timeout', 'PokeDataService'];
+  function GameStateService($timeout, PokeDataService) {
+    const gameState = this;
     const pokeData = PokeDataService;
+
+    gameState.difficulty = null;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
     const FLIP_DELAY = 500;
@@ -32,9 +34,9 @@
       }
     }
 
-    cardState.cards = playingCards;
+    gameState.cards = playingCards;
 
-    cardState.flipCard = (idx) => {
+    gameState.flipCard = (idx) => {
       playingCards[idx].isFaceUp = !playingCards[idx].isFaceUp;
 
       matchCards();

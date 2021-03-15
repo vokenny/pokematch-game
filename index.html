@@ -31,7 +31,7 @@
       const P = new Pokedex.Pokedex({ cacheImages: true });
     </script>
 
-    <main ng-app="PokeMatchApp">
+    <main ng-app="PokeMatchApp" ng-controller="GameController as gameCtrl">
       <ui-view></ui-view>
     </main>
 
@@ -44,9 +44,11 @@
 
     <!-- PokeMatchApp artifacts -->
     <script src="src/services/pokeData.service.js"></script>
-    <script src="src/services/cardState.service.js"></script>
-    <script src="src/controllers/card.controller.js"></script>
+    <script src="src/services/gameState.service.js"></script>
+    <script src="src/services/timer.service.js"></script>
+    <script src="src/controllers/game.controller.js"></script>
     <script src="src/components/card.component.js"></script>
+    <script src="src/components/timer.component.js"></script>
 
     <!-- Routes -->
     <script src="src/routes.js"></script>

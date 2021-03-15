@@ -1,5 +1,6 @@
 * {
-  font-family: 'Fascinate', cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #002215;
 }
 
 body {
@@ -7,20 +8,28 @@ body {
 }
 
 #title {
-  margin-top: 35vh;
-  color: #002215;
+  font-family: 'Fascinate', cursive;
+  margin-top: 30vh;
 }
 
-#start {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: auto;
-  width: auto;
+.start-container {
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.start {
+  min-width: 100px;
+}
+
+#timer {
+  margin-top: 5vh;
+}
+
+/* GAME GRID AND PLAYING CARDS */
 .game-grid {
   height: 100vh;
-  display: grid;
-  align-items: center;
 }
 
 .row {
@@ -41,7 +50,7 @@ body {
 }
 
 .card {
-  background-color: #cefff5;
+  background-color: #a8ecd1;
   height: 100%;
   justify-content: center;
   align-items: center;

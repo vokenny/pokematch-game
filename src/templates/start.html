@@ -1,6 +1,38 @@
 <section class="container">
   <div class="row">
     <h1 id="title" class="text-center">Pokematch<br />Card Game</h1>
-    <button id="start" class="btn btn-primary" ui-sref="play">Start</button>
+
+    <div class="start-container">
+      <button
+        id="start-easy"
+        class="start btn btn-primary col-2"
+        ui-sref="play"
+        ng-click="gameCtrl.setDifficulty('easy')"
+      >
+        Easy
+      </button>
+    </div>
+
+    <div class="start-container">
+      <button
+        id="start-med"
+        class="start btn btn-warning col-2"
+        ui-sref="play"
+        ng-click="gameCtrl.setDifficulty('med')"
+      >
+        Medium
+      </button>
+    </div>
+
+    <div class="start-container">
+      <button
+        id="start-hard"
+        class="start btn btn-danger col-2"
+        ui-sref="play"
+        ng-click="gameCtrl.setDifficulty('hard')"
+      >
+        Hard
+      </button>
+    </div>
   </div>
 </section>

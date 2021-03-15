@@ -1,12 +1,12 @@
 <div class="row col-10">
   <div
     class="card-container col-4 col-md-2"
-    ng-repeat="sprite in cardCtrl.getCards() track by $index"
+    ng-repeat="sprite in gameCtrl.getCards() track by $index"
   >
     <button
       class="button-tile"
       ng-disabled="!sprite.inPlay"
-      ng-click="cardCtrl.flipCard($index)"
+      ng-click="gameCtrl.flipCard($index)"
     >
       <div class="card" ng-class="!sprite.isFaceUp ? 'card-back' : ''">
         <div class="card-body">

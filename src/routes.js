@@ -18,7 +18,7 @@
       .state('play', {
         url: '/',
         templateUrl: 'src/templates/game.html',
-        controller: 'CardController as cardCtrl'
+        controller: 'GameController as gameCtrl'
       })
   }
 

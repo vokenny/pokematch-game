@@ -3,8 +3,8 @@
 
   angular
     .module('PokeMatchApp')
-    .component('card', {
-      templateUrl: 'src/templates/card.html',
+    .component('timer', {
+      templateUrl: 'src/templates/timer.html',
       controller: 'GameController',
       controllerAs: 'gameCtrl'
     });
