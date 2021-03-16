@@ -18,19 +18,26 @@ body {
   font-family: 'Fascinate', cursive;
 }
 
-.start-button {
+.start {
   margin-top: 2vh;
   display: flex;
   justify-content: center;
 }
 
-.start {
+.start-button {
+  width: 100%;
   min-width: 100px;
 }
 
+/* TIMER */
 #timer {
   float: left;
   clear: both;
+}
+
+#countdown {
+  font-size: calc(14px + 0.5vw);
+  margin: 0px;
 }
 
 /* GAME GRID AND PLAYING CARDS */
