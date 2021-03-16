@@ -13,7 +13,7 @@
     gameState.difficulty = null;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
-    const FLIP_DELAY = 500;
+    const FLIP_DELAY = 400;
 
     const uniqueCards = pokeData.data.map((pkmn) => {
       pkmn.isFaceUp = false;
