@@ -12,6 +12,7 @@
 
     var duration = null;
     var time = null;
+    var timerCountdown = null;
 
     timer.setTimer = () => {
       switch (gameState.difficulty) {
@@ -29,9 +30,11 @@
 
     function countdown() {
       time = time - 1000;
+
+      if (time <= 0) { $interval.cancel(timerCountdown) }
     }
 
-    timer.triggerCountdown = () => $interval(countdown, 1000);
+    timer.triggerCountdown = () => timerCountdown = $interval(countdown, 1000);
 
     timer.getTime = () => $filter('date')(time, 'mm:ss');
 

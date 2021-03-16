@@ -7,15 +7,20 @@ body {
   background-color: #ddfff8;
 }
 
-#title {
-  font-family: 'Fascinate', cursive;
-  margin-top: 30vh;
-}
-
-.start-container {
-  margin-top: 2vh;
+.game-container {
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+#title {
+  font-family: 'Fascinate', cursive;
+}
+
+.start-button {
+  margin-top: 2vh;
+  display: flex;
   justify-content: center;
 }
 
@@ -24,14 +29,11 @@ body {
 }
 
 #timer {
-  margin-top: 5vh;
+  float: left;
+  clear: both;
 }
 
 /* GAME GRID AND PLAYING CARDS */
-.game-grid {
-  height: 100vh;
-}
-
 .row {
   margin: auto;
 }
