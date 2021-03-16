@@ -2,6 +2,8 @@
 
 Card matching game on AngularJS 1.8
 
+https://vokenny.github.io/pokematch-game/
+
 ## Dependencies
 
 ### pokeapi-js-wrapper
