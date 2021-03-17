@@ -17,7 +17,7 @@
     timer.setTimer = () => {
       switch (gameState.difficulty) {
         case 'hard':
-          duration = 1000;
+          duration = 30000;
           break;
         case 'med':
           duration = 45000;
