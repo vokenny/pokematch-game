@@ -31,8 +31,27 @@
       const P = new Pokedex.Pokedex({ cacheImages: true });
     </script>
 
-    <main ng-app="PokeMatchApp" ng-controller="GameController as gameCtrl">
-      <ui-view class="game-container container"></ui-view>
+    <main
+      ng-app="PokeMatchApp"
+      class="game-container"
+      ng-controller="GameController as gameCtrl"
+    >
+      <section id="overlay" ng-if="gameCtrl.isEndOfRound()">
+        <div class="container-fluid">
+          <h1 id="game-over" class="text-center">Game Over</h1>
+          <div class="start">
+            <button
+              id="restart-game"
+              class="start-button btn btn-success col-2"
+              ng-click="gameCtrl.restart()"
+              ui-sref="start"
+            >
+              Restart
+            </button>
+          </div>
+        </div>
+      </section>
+      <ui-view class="container"></ui-view>
     </main>
 
     <!-- Libraries -->

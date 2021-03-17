@@ -10,7 +10,8 @@
     const gameState = this;
     const pokeData = PokeDataService;
 
-    gameState.difficulty = null;
+    gameState.difficulty = 'easy';
+    gameState.isEndOfRound = false;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
     const FLIP_DELAY = 400;
@@ -33,6 +34,14 @@
         [arr[i], arr[j]] = [arr[j], arr[i]];
       }
     }
+
+    gameState.shuffleAndResetCards = () => {
+      shuffle(playingCards);
+      playingCards.forEach((card) => {
+        card.isFaceUp = false;
+        card.inPlay = true;
+      });
+    };
 
     gameState.cards = playingCards;
 

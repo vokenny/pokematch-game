@@ -17,10 +17,17 @@
       timer.triggerCountdown();
     };
 
+    game.isEndOfRound = () => gameState.isEndOfRound;
+
     game.getTime = () => timer.getTime();
 
     game.getCards = () => gameState.cards;
 
     game.flipCard = (idx) => gameState.flipCard(idx);
+
+    game.restart = () => {
+      gameState.shuffleAndResetCards();
+      gameState.isEndOfRound = false;
+    };
   }
 }());

@@ -10,14 +10,14 @@
     const timer = this;
     const gameState = GameStateService
 
-    var duration = null;
-    var time = null;
-    var timerCountdown = null;
+    var duration = 0;
+    var time = 0;
+    var timerCountdown = 0;
 
     timer.setTimer = () => {
       switch (gameState.difficulty) {
         case 'hard':
-          duration = 30000;
+          duration = 1000;
           break;
         case 'med':
           duration = 45000;
@@ -31,7 +31,10 @@
     function countdown() {
       time = time - 1000;
 
-      if (time <= 0) { $interval.cancel(timerCountdown) }
+      if (time <= 0) {
+        gameState.isEndOfRound = true;
+        $interval.cancel(timerCountdown);
+      }
     }
 
     timer.triggerCountdown = () => timerCountdown = $interval(countdown, 1000);
