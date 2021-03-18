@@ -2,5 +2,12 @@
   <div class="row">
     <timer id="timer"></timer>
     <card></card>
+    <button
+      class="test-button btn btn-success col-2"
+      ng-if="gameCtrl.testModeEnabled"
+      ng-click="gameCtrl.solve()"
+    >
+      Instant win
+    </button>
   </div>
 </section>

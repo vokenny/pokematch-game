@@ -26,7 +26,10 @@
     // Deep cloning uniqueCards; this method is only safe for JSON-safe objects
     const playingCards = [...uniqueCards, ...JSON.parse(JSON.stringify(uniqueCards))];
 
-    shuffle(playingCards);
+    gameState.start = () => {
+      shuffleAndResetCards();
+      gameState.isEndOfRound = false;
+    }
 
     function shuffle(arr) {
       // Fisher-Yates shuffle
@@ -36,7 +39,7 @@
       }
     }
 
-    gameState.shuffleAndResetCards = () => {
+    function shuffleAndResetCards() {
       shuffle(playingCards);
 
       playingCards.forEach((card) => {
@@ -81,6 +84,15 @@
         gameState.isEndOfRound = true;
         gameState.hasWon = true;
       }
+    }
+
+    gameState.testWin = () => {
+      playingCards.forEach((card) => {
+        card.isFaceUp = true;
+        card.inPlay = false;
+      });
+
+      checkWinState();
     }
   }
 }());

@@ -46,7 +46,9 @@
       }
     }
 
-    timer.triggerCountdown = () => timerCountdown = $interval(countdown, TIMER_INTERVAL);
+    timer.triggerCountdown = () => {
+      timerCountdown = $interval(countdown, TIMER_INTERVAL);
+    }
 
     timer.getTime = () => $filter('date')(time, 'mm:ss');
 

@@ -102,3 +102,7 @@ body {
   background-color: #00a060;
   transition: all 0.1s linear;
 }
+
+.test-button {
+  margin: 2vh auto;
+}
