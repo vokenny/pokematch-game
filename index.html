@@ -36,9 +36,14 @@
       class="game-container"
       ng-controller="GameController as gameCtrl"
     >
-      <section id="overlay" ng-if="gameCtrl.isEndOfRound()">
+      <section id="overlay" ng-if="gameCtrl.checkEndOfRound()">
         <div class="container-fluid">
-          <h1 id="game-over" class="text-center">Game Over</h1>
+          <h1 class="end-round-msg text-center" ng-if="gameCtrl.checkHasWon()">
+            You won!
+          </h1>
+          <h1 class="end-round-msg text-center" ng-if="!gameCtrl.checkHasWon()">
+            Game Over
+          </h1>
           <div class="start">
             <button
               id="restart-game"

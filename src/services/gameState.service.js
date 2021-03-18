@@ -12,6 +12,7 @@
 
     gameState.difficulty = 'easy';
     gameState.isEndOfRound = false;
+    gameState.hasWon = false;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
     const HIDE_DELAY = 150;
@@ -49,6 +50,7 @@
       playingCards[idx].isFaceUp = !playingCards[idx].isFaceUp;
 
       matchCards();
+      checkWinState();
     };
 
     function matchCards() {
@@ -71,6 +73,13 @@
 
     function faceDownCards(cards) {
       cards.map((card) => card.isFaceUp = false);
+    }
+
+    function checkWinState() {
+      if (playingCards.every(_ => _.isFaceUp && !_.inPlay)) {
+        gameState.isEndOfRound = true;
+        gameState.hasWon = true;
+      }
     }
   }
 }());

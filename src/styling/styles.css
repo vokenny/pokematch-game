@@ -42,7 +42,7 @@ body {
   z-index: 2;
 }
 
-#game-over {
+.end-round-msg {
   color: #ddfff8;
   text-shadow: 2px 2px black, -2px -2px black;
   height: 50%;

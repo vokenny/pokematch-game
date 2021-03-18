@@ -17,7 +17,9 @@
       timer.triggerCountdown();
     };
 
-    game.isEndOfRound = () => gameState.isEndOfRound;
+    game.checkEndOfRound = () => gameState.isEndOfRound;
+
+    game.checkHasWon = () => gameState.hasWon;
 
     game.getTime = () => timer.getTime();
 
