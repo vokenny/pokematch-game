@@ -14,7 +14,7 @@
     gameState.isEndOfRound = false;
 
     const MAX_FLIPPED_IN_PLAY_CARDS = 2;
-    const FLIP_DELAY = 400;
+    const HIDE_DELAY = 150;
 
     const uniqueCards = pokeData.data.map((pkmn) => {
       pkmn.isFaceUp = false;
@@ -60,7 +60,7 @@
         if (flippedInPlay.every((pkmn) => pkmn.name === pkmnName)) {
           removeFromPlay(flippedInPlay);
         } else {
-          $timeout(faceDownCards, FLIP_DELAY, true, flippedInPlay);
+          $timeout(faceDownCards, HIDE_DELAY, true, flippedInPlay);
         }
       }
     }
