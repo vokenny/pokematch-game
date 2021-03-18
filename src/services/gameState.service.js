@@ -38,6 +38,7 @@
 
     gameState.shuffleAndResetCards = () => {
       shuffle(playingCards);
+
       playingCards.forEach((card) => {
         card.isFaceUp = false;
         card.inPlay = true;
