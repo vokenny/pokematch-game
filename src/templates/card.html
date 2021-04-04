@@ -10,7 +10,7 @@
     >
       <div class="card" ng-class="!sprite.isFaceUp ? 'card-back' : ''">
         <div class="card-body">
-          <img src="{{sprite.path}}" ng-if="sprite.isFaceUp" />
+          <img src="{{sprite.path}}" ng-show="sprite.isFaceUp" />
         </div>
       </div>
     </button>
