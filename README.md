@@ -4,7 +4,7 @@ Card matching game on AngularJS 1.8
 
 https://vokenny.github.io/pokematch-game/
 
-<img src="./src/assets/pokematch-demo.gif" alt="pokematch demo" width="50%" height="auto">
+<img src="./src/assets/pokematch-demo.gif" alt="pokematch demo" width="75%" height="auto">
 
 ## Dependencies
 
