@@ -2,6 +2,8 @@
 
 Card matching game on AngularJS 1.8
 
+Works on desktop, tablet, and mobile viewports
+
 https://vokenny.github.io/pokematch-game/
 
 <img src="./src/assets/pokematch-demo.gif" alt="pokematch demo" width="75%" height="auto">
