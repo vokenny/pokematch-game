@@ -1,8 +1,6 @@
 # pokematch-game
 
-Card matching game on AngularJS 1.8
-
-Works on desktop, tablet, and mobile viewports
+Card matching game on AngularJS 1.8. Works on desktop, tablet, and mobile viewports.
 
 https://vokenny.github.io/pokematch-game/
 
